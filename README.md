@@ -9,11 +9,18 @@ A Django REST API for sending SMS messages using Twilio.
    pip install -r requirements.txt
    ```
 
-2. **Configure Twilio Credentials**
-   - Update `twilioapi/settings.py` with your Twilio credentials:
-     - `TWILIO_ACCOUNT_SID`
-     - `TWILIO_AUTH_TOKEN`
-     - `TWILIO_MESSAGING_SERVICE_SID`
+2. **Configure Environment Variables**
+   - Create a `.env` file in the project root (copy from `.env.example`):
+     ```bash
+     cp .env.example .env
+     ```
+   - Update the `.env` file with your Twilio credentials:
+     ```
+     TWILIO_ACCOUNT_SID=your-account-sid-here
+     TWILIO_AUTH_TOKEN=your-auth-token-here
+     TWILIO_MESSAGING_SERVICE_SID=your-messaging-service-sid-here
+     ```
+   - **Important:** Never commit the `.env` file to version control!
 
 3. **Run Migrations**
    ```bash
