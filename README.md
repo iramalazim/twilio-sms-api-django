@@ -34,7 +34,7 @@ A Django REST API for sending SMS messages using Twilio.
 **Request Body:**
 ```json
 {
-    "to": "+18777804236",
+    "to": "+8801345678903",
     "body": "Your message here"
 }
 ```
@@ -46,7 +46,7 @@ A Django REST API for sending SMS messages using Twilio.
     "message": "SMS sent successfully",
     "data": {
         "message_sid": "SM...",
-        "to": "+18777804236",
+        "to": "+8801345678903",
         "body": "Your message here",
         "status": "queued",
         "date_created": "2025-10-03T..."
@@ -71,7 +71,7 @@ A Django REST API for sending SMS messages using Twilio.
 curl -X POST http://localhost:8000/api/send-sms/ \
   -H "Content-Type: application/json" \
   -d '{
-    "to": "+18777804236",
+    "to": "+8801345678903",
     "body": "Hello from Django Twilio API!"
   }'
 ```
@@ -84,7 +84,7 @@ curl -X POST http://localhost:8000/api/send-sms/ \
 4. Body (raw JSON):
    ```json
    {
-       "to": "+18777804236",
+       "to": "+8801345678903",
        "body": "Test message"
    }
    ```
